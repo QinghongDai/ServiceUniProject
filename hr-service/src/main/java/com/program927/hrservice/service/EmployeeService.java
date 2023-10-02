@@ -10,13 +10,14 @@ import java.util.Optional;
 
 @Component
 public interface EmployeeService {
-    MessageResponse createEmployee(EmployeeRequest employeeRequest);
-
-    Optional<Employee> updateEmployee(Integer employeeId, EmployeeRequest employeeRequest);
-
-    void deleteEmployee(Integer employeeId);
-
-    Employee getASingleEmployee(Integer employeeId);
 
     List<Employee> getAllEmployee();
+
+    Employee getEmployeeById(Integer employeeId);
+
+    MessageResponse createEmployee(EmployeeRequest employeeRequest);
+
+    MessageResponse updateEmployee(Integer employeeId, EmployeeRequest employeeRequest);
+
+    MessageResponse deleteEmployee(Integer employeeId);
 }
