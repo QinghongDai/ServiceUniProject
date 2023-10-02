@@ -3,7 +3,7 @@ CREATE DATABASE csci927;
 CREATE TABLE csci927.EMPLOYEE (
   id int AUTO_INCREMENT,
   firstName varchar(255),
-  lastname varchar(255),
+  lastName varchar(255),
   phoneNumber varchar(255),
   email varchar(255),
   salary DECIMAL(5,2) default 0,

@@ -36,10 +36,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public int update(Integer employeeId, EmployeeRequest employeeRequest) {
-        return jdbcTemplate.update("update csci927.employee set firstName = ? and lastName = ? and " +
-                        "phoneNumber = ? and email = ? and salary = ? and department = ？ where id = ?",
-                        employeeRequest.getFirstName(), employeeRequest.getLastname(), employeeRequest.getPhoneNumber(),
-                        employeeRequest.getEmail(), employeeRequest.getSalary(), employeeRequest.getDepartment(), employeeId);
+        return jdbcTemplate.update("update csci927.employee set firstName = '" + employeeRequest.getFirstName() +
+                        "', lastName = '"  + employeeRequest.getLastName() +
+                        "', phoneNumber = '" + employeeRequest.getPhoneNumber() +
+                        "', email = '" + employeeRequest.getEmail() +
+                        "', salary = " + employeeRequest.getSalary() +
+                        ", department = '" + employeeRequest.getDepartment() +
+                        "' where id = " + employeeId);
     }
 
     @Override
