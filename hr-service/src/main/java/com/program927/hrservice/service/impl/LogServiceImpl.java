@@ -1,0 +1,18 @@
+package com.program927.hrservice.service.impl;
+
+import com.program927.hrservice.dao.EventLogDao;
+import com.program927.hrservice.model.EventLog;
+import com.program927.hrservice.service.LogService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class LogServiceImpl implements LogService {
+    @Autowired
+    private EventLogDao eventLogDao;
+
+    @Override
+    public void addLog(EventLog eventLog) {
+        eventLogDao.save(eventLog);
+    }
+}
