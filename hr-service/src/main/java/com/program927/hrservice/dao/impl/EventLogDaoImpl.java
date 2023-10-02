@@ -14,7 +14,7 @@ public class EventLogDaoImpl implements EventLogDao {
     @Override
     public void save(EventLog eventLog) {
         jdbcTemplate.update("insert into csci927.eventlog (serviceProvider, serviceName, serviceFunction, status, startTime, endTime) " +
-                        "values (?, ?, ?, ?, ?, ?)", eventLog.getServiceProvider(), eventLog.getServiceFunction(),
+                        "values (?, ?, ?, ?, ?, ?)", eventLog.getServiceProvider(), eventLog.getServiceName(),
                         eventLog.getServiceFunction(), eventLog.getStatus(), eventLog.getStartTime(), eventLog.getEndTime());
     }
 }
