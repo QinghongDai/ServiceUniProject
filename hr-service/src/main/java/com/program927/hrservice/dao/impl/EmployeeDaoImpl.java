@@ -1,8 +1,8 @@
 package com.program927.hrservice.dao.impl;
 
 import com.program927.hrservice.dao.EmployeeDao;
-import com.program927.hrservice.model.Employee;
-import com.program927.hrservice.model.EmployeeRequest;
+import com.program927.hrservice.model.employee.Employee;
+import com.program927.hrservice.model.employee.EmployeeRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

@@ -1,4 +1,4 @@
-package com.program927.hrservice.model;
+package com.program927.hrservice.model.common;
 
 import lombok.Builder;
 import lombok.Data;

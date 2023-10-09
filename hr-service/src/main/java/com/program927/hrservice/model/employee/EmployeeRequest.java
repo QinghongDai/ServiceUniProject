@@ -1,12 +1,11 @@
-package com.program927.hrservice.model;
+package com.program927.hrservice.model.employee;
 
 import lombok.Data;
 
 @Data
-public class Employee {
-    private Integer id;
+public class EmployeeRequest {
     private String firstName;
-    private String lastname;
+    private String lastName;
     private String phoneNumber;
     private String email;
     private double salary;

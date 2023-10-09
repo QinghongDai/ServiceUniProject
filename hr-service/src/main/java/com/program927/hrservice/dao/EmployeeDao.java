@@ -1,10 +1,9 @@
 package com.program927.hrservice.dao;
 
-import com.program927.hrservice.model.Employee;
-import com.program927.hrservice.model.EmployeeRequest;
+import com.program927.hrservice.model.employee.Employee;
+import com.program927.hrservice.model.employee.EmployeeRequest;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface EmployeeDao {
 

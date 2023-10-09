@@ -1,8 +1,8 @@
 package com.program927.hrservice.service;
 
-import com.program927.hrservice.model.Employee;
-import com.program927.hrservice.model.EmployeeRequest;
-import com.program927.hrservice.model.MessageResponse;
+import com.program927.hrservice.model.employee.Employee;
+import com.program927.hrservice.model.employee.EmployeeRequest;
+import com.program927.hrservice.model.common.MessageResponse;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

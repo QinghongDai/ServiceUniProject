@@ -1,7 +1,7 @@
 package com.program927.hrservice.dao.impl;
 
 import com.program927.hrservice.dao.EventLogDao;
-import com.program927.hrservice.model.EventLog;
+import com.program927.hrservice.model.eventLog.EventLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
