@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cbd4c2ce-c85d-4386-8d66-127fa28b7c65" name="Changes" comment="init contract">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/controller/ContractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/ContractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/ContractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/ContractDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/ContractDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/controller/PayrollController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/PayrollDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/PayrollDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/payroll/Payroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/PayrollService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/PayrollServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/contract/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/ContractService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/ContractServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/init_hr_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/init_hr_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/contract/ContractRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/contract/ContractRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +55,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.program927.hrservice.model.contract" />
       <recent name="com.program927.hrservice.controller" />
+      <recent name="com.program927.hrservice.model.contract" />
     </key>
   </component>
   <component name="RunManager">
@@ -92,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696848688168</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init contract">
+      <option name="closed" value="true" />
+      <created>1696898852280</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696898852280</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

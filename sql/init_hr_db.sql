@@ -37,3 +37,17 @@ CREATE TABLE csci927.CONTRACT (
   fileUrl varchar(255),
   PRIMARY KEY (id)
 );
+
+CREATE TABLE csci927.PAYROLL (
+  id int AUTO_INCREMENT,
+  employeeId int,
+  contractId int,
+  period varchar(32),
+  wages DECIMAL(7,2) default 0,
+  tax DECIMAL(7,2) default 0,
+  superPay DECIMAL(7,2) default 0,
+  otherPay DECIMAL(7,2) default 0,
+  realPay DECIMAL(7,2) default 0,
+  created DATETIME DEFAULT CURRENT_TIMESTAMP
+  PRIMARY KEY (id)
+);
