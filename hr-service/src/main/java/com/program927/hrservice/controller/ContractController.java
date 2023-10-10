@@ -6,6 +6,8 @@ import com.program927.hrservice.model.contract.ContractRequest;
 import com.program927.hrservice.model.eventLog.EventLog;
 import com.program927.hrservice.service.ContractService;
 import com.program927.hrservice.service.LogService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/contract")
 public class ContractController {
+    private static final Logger log = LoggerFactory.getLogger(ContractController.class);
     @Autowired
     private ContractService contractService;
     @Autowired
@@ -23,6 +26,7 @@ public class ContractController {
 
     @GetMapping("/getAll")
     public ResponseEntity<List<Contract>> getAllContracts () {
+        log.error("start ContractController getAll");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         List<Contract> contracts = null;
@@ -30,6 +34,7 @@ public class ContractController {
             contracts = contractService.getAllContract();
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ContractController getAll");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -44,6 +49,7 @@ public class ContractController {
     }
     @GetMapping("/query/{id}")
     public ResponseEntity<Contract> getContractById (@PathVariable("id") Integer id) {
+        log.error("start ContractController query");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         Contract contract = null;
@@ -51,6 +57,7 @@ public class ContractController {
             contract = contractService.getContractById(id);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ContractController query");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -65,6 +72,7 @@ public class ContractController {
     }
     @PostMapping("/add")
     public ResponseEntity<MessageResponse> addContract(@RequestBody Contract contract) {
+        log.error("start ContractController add");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -72,6 +80,7 @@ public class ContractController {
             response = contractService.createContract(contract);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ContractController add");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -86,6 +95,7 @@ public class ContractController {
     }
     @PutMapping("/update/{id}")
     public ResponseEntity<MessageResponse> updateContract( @PathVariable Integer id, @RequestBody ContractRequest contract) {
+        log.info("start ContractController update");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -93,6 +103,7 @@ public class ContractController {
             response = contractService.updateContract(id, contract);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ContractController update");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -107,6 +118,7 @@ public class ContractController {
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<MessageResponse> deleteContract(@PathVariable("id") Integer id) {
+        log.info("start ContractController delete");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -114,6 +126,7 @@ public class ContractController {
             response = contractService.deleteContract(id);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ContractController delete");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")

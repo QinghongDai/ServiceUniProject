@@ -3,6 +3,8 @@ package com.program927.examservice.controller;
 import com.program927.examservice.model.common.MessageResponse;
 import com.program927.examservice.model.eventLog.EventLog;
 import com.program927.examservice.model.examParticipants.ExamParticipants;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/examParticipants")
 public class ExamParticipantsController {
+    private static final Logger log = LoggerFactory.getLogger(ExamParticipantsController.class);
     @Autowired
     private ExamParticipantsService examParticipantsService;
     @Autowired
@@ -22,6 +25,7 @@ public class ExamParticipantsController {
 
     @GetMapping("/getAll")
     public ResponseEntity<List<ExamParticipants>> getAllExamParticipants() {
+        log.info("start ExamParticipantsController getAll");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         List<ExamParticipants> examParticipants = null;
@@ -29,6 +33,7 @@ public class ExamParticipantsController {
             examParticipants = examParticipantsService.getAllExamParticipants();
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ExamParticipantsController getAll");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("examServiceProvider")
@@ -43,6 +48,7 @@ public class ExamParticipantsController {
     }
     @GetMapping("/query/{id}")
     public ResponseEntity<ExamParticipants> getExamParticipantById (@PathVariable("id") Integer id) {
+        log.info("start ExamParticipantsController query");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         ExamParticipants examParticipant = null;
@@ -50,6 +56,7 @@ public class ExamParticipantsController {
             examParticipant = examParticipantsService.getExamParticipantById(id);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ExamParticipantsController query");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("examServiceProvider")
@@ -64,6 +71,7 @@ public class ExamParticipantsController {
     }
     @PostMapping("/add")
     public ResponseEntity<MessageResponse> addExamParticipant(@RequestBody ExamParticipants examParticipants) {
+        log.info("start ExamParticipantsController add");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -71,6 +79,7 @@ public class ExamParticipantsController {
             response = examParticipantsService.createExamParticipant(examParticipants);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ExamParticipantsController add");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("examServiceProvider")
@@ -85,6 +94,7 @@ public class ExamParticipantsController {
     }
     @PutMapping("/update/{id}")
     public ResponseEntity<MessageResponse> updateExamParticipant( @PathVariable Integer id, @RequestBody ExamParticipants examParticipants) {
+        log.info("start ExamParticipantsController update");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -92,6 +102,7 @@ public class ExamParticipantsController {
             response = examParticipantsService.updateExamParticipant(id, examParticipants);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ExamParticipantsController update");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("examServiceProvider")
@@ -106,6 +117,7 @@ public class ExamParticipantsController {
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<MessageResponse> deleteExamParticipant(@PathVariable("id") Integer id) {
+        log.info("start ExamParticipantsController delete");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -113,6 +125,7 @@ public class ExamParticipantsController {
             response = examParticipantsService.deleteExamParticipant(id);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in ExamParticipantsController delete");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("examServiceProvider")

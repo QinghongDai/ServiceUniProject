@@ -5,6 +5,8 @@ import com.program927.hrservice.model.eventLog.EventLog;
 import com.program927.hrservice.model.payroll.Payroll;
 import com.program927.hrservice.service.LogService;
 import com.program927.hrservice.service.PayrollService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/payroll")
 public class PayrollController {
+    private static final Logger log = LoggerFactory.getLogger(PayrollController.class);
     @Autowired
     private PayrollService payrollService;
     @Autowired
@@ -22,6 +25,7 @@ public class PayrollController {
 
     @GetMapping("/getAll")
     public ResponseEntity<List<Payroll>> getAllPayroll () {
+        log.error("start PayrollController getAll");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         List<Payroll> payrolls = null;
@@ -29,6 +33,7 @@ public class PayrollController {
             payrolls = payrollService.getAllPayroll();
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in PayrollController getAll");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -43,6 +48,7 @@ public class PayrollController {
     }
     @GetMapping("/query/{id}")
     public ResponseEntity<Payroll> getPayrollById (@PathVariable("id") Integer id) {
+        log.error("start PayrollController query");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         Payroll payroll = null;
@@ -50,6 +56,7 @@ public class PayrollController {
             payroll = payrollService.getPayrollById(id);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in PayrollController query");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -64,6 +71,7 @@ public class PayrollController {
     }
     @PostMapping("/add")
     public ResponseEntity<MessageResponse> addPayroll(@RequestBody Payroll payroll) {
+        log.error("start PayrollController add");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -71,6 +79,7 @@ public class PayrollController {
             response = payrollService.createPayroll(payroll);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in PayrollController add");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -85,6 +94,7 @@ public class PayrollController {
     }
     @PutMapping("/batchAdd")
     public ResponseEntity<MessageResponse> batchAdd(@RequestBody List<Payroll> payrolls) {
+        log.error("start PayrollController batchAdd");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -92,6 +102,7 @@ public class PayrollController {
             response = payrollService.batchAdd(payrolls);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in PayrollController batchAdd");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -106,6 +117,7 @@ public class PayrollController {
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<MessageResponse> deletePayroll(@PathVariable("id") Integer id) {
+        log.error("start PayrollController delete");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -113,6 +125,7 @@ public class PayrollController {
             response = payrollService.deletePayroll(id);
         } catch (Exception e) {
             status = "fail";
+            log.error("Error occurred in PayrollController delete");
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
