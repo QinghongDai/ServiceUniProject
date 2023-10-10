@@ -6,7 +6,7 @@ import lombok.Data;
 public class Contract {
     private Integer id;
     private String type;
-    private String employeeId;
+    private Integer employeeId;
     private Integer status;
     private String signDate;
     private String expireDate;
