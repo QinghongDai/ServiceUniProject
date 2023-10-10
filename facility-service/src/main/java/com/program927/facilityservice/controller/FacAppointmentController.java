@@ -1,80 +1,80 @@
-package controller;
+package com.program927.facilityservice.controller;
 
-import model.common.MessageResponse;
-import model.eventLog.EventLog;
-import model.facility.Facility;
+import com.program927.facilityservice.model.common.MessageResponse;
+import com.program927.facilityservice.model.eventLog.EventLog;
+import com.program927.facilityservice.service.FacAppointmentService;
+import com.program927.facilityservice.model.facAppointment.FacAppointment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.FacilityService;
-import service.LogService;
+import com.program927.facilityservice.service.LogService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/facility")
-public class FacilityController {
+@RequestMapping("/facAppointment")
+public class FacAppointmentController {
     @Autowired
-    private FacilityService facilityService;
+    private FacAppointmentService facAppointmentService;
     @Autowired
     private LogService logService;
 
     @GetMapping("/getAll")
-    public ResponseEntity<List<Facility>> getAllFacilities () {
+    public ResponseEntity<List<FacAppointment>> getAllFacAppointment () {
         Long startTime = System.currentTimeMillis();
         String status = "success";
-        List<Facility> facilities = null;
+        List<FacAppointment> facAppointments = null;
         try {
-            facilities = facilityService.getAllFacilities();
+            facAppointments = facAppointmentService.getAllFacAppointment();
         } catch (Exception e) {
             status = "fail";
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("facilityServiceProvider")
-                    .serviceName("facilityService")
+                    .serviceName("facAppointmentService")
                     .serviceFunction("getAll")
                     .status(status)
                     .startTime(startTime)
                     .endTime(System.currentTimeMillis())
                     .build());
         }
-        return new ResponseEntity<>(facilities, HttpStatus.OK);
+        return new ResponseEntity<>(facAppointments, HttpStatus.OK);
     }
     @GetMapping("/query/{id}")
-    public ResponseEntity<Facility> getFacilityById (@PathVariable("id") Integer id) {
+    public ResponseEntity<FacAppointment> getFacAppointmentById (@PathVariable("id") Integer id) {
         Long startTime = System.currentTimeMillis();
         String status = "success";
-        Facility facility = null;
+        FacAppointment facAppointment = null;
         try {
-            facility = facilityService.getFacilityById(id);
+            facAppointment = facAppointmentService.getFacAppointmentById(id);
         } catch (Exception e) {
             status = "fail";
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("facilityServiceProvider")
-                    .serviceName("facilityService")
+                    .serviceName("facAppointmentService")
                     .serviceFunction("getById")
                     .status(status)
                     .startTime(startTime)
                     .endTime(System.currentTimeMillis())
                     .build());
         }
-        return new ResponseEntity<>(facility, HttpStatus.OK);
+        return new ResponseEntity<>(facAppointment, HttpStatus.OK);
     }
     @PostMapping("/add")
-    public ResponseEntity<MessageResponse> addContract(@RequestBody Facility facility) {
+    public ResponseEntity<MessageResponse> addFacAppointment(@RequestBody FacAppointment facAppointment) {
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
         try {
-            response = facilityService.createFacility(facility);
+            response = facAppointmentService.createFacAppointment(facAppointment);
         } catch (Exception e) {
             status = "fail";
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("facilityServiceProvider")
-                    .serviceName("facilityService")
+                    .serviceName("facAppointmentService")
                     .serviceFunction("add")
                     .status(status)
                     .startTime(startTime)
@@ -84,18 +84,18 @@ public class FacilityController {
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
     @PutMapping("/update/{id}")
-    public ResponseEntity<MessageResponse> updateFacility( @PathVariable Integer id, @RequestBody Facility facility) {
+    public ResponseEntity<MessageResponse> updateFacAppointment( @PathVariable Integer id, @RequestBody FacAppointment facAppointment) {
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
         try {
-            response = facilityService.updateFacility(id, facility);
+            response = facAppointmentService.updateFacAppointment(id, facAppointment);
         } catch (Exception e) {
             status = "fail";
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("facilityServiceProvider")
-                    .serviceName("facilityService")
+                    .serviceName("facAppointmentService")
                     .serviceFunction("update")
                     .status(status)
                     .startTime(startTime)
@@ -105,18 +105,18 @@ public class FacilityController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<MessageResponse> deleteFacility(@PathVariable("id") Integer id) {
+    public ResponseEntity<MessageResponse> deleteFacAppointment(@PathVariable("id") Integer id) {
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
         try {
-            response = facilityService.deleteFacility(id);
+            response = facAppointmentService.deleteFacAppointment(id);
         } catch (Exception e) {
             status = "fail";
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("facilityServiceProvider")
-                    .serviceName("facilityService")
+                    .serviceName("facAppointmentService")
                     .serviceFunction("delete")
                     .status(status)
                     .startTime(startTime)
