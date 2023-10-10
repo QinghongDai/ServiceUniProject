@@ -1,37 +1,37 @@
 package controller;
 
 import model.eventLog.EventLog;
-import model.facAnalysis.FacAnalysis;
+import model.examAnalysis.ExamAnalysis;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.FacAnalysisService;
+import service.ExamAnalysisService;
 import service.LogService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/facAnalysis")
-public class FacAnalysisController {
+@RequestMapping("/examAnalysis")
+public class ExamAnalysisController {
     @Autowired
-    private FacAnalysisService facAnalysisService;
+    private ExamAnalysisService examAnalysisService;
     @Autowired
     private LogService logService;
 
     @GetMapping("/getTopPopular")
-    public ResponseEntity<List<FacAnalysis>> getTopPopularFacilities () {
+    public ResponseEntity<List<ExamAnalysis>> getTopPopularExams () {
         Long startTime = System.currentTimeMillis();
         String status = "success";
-        List<FacAnalysis> top10Pop = null;
+        List<ExamAnalysis> top10Pop = null;
         try {
-            top10Pop = facAnalysisService.getTopPopularFacilities();
+            top10Pop = examAnalysisService.getTopPopularExams();
         } catch (Exception e) {
             status = "fail";
         } finally {
             logService.addLog(EventLog.builder()
-                    .serviceProvider("facilityServiceProvider")
-                    .serviceName("facAnalysisService")
+                    .serviceProvider("examServiceProvider")
+                    .serviceName("examAnalysisService")
                     .serviceFunction("getTopPopular")
                     .status(status)
                     .startTime(startTime)
@@ -40,20 +40,20 @@ public class FacAnalysisController {
         }
         return new ResponseEntity<>(top10Pop, HttpStatus.OK);
     }
-    @GetMapping("/getTopRates")
-    public ResponseEntity<List<FacAnalysis>> getTopRatesFacilities () {
+    @GetMapping("/getTopFailRates")
+    public ResponseEntity<List<ExamAnalysis>> getTopFailRatesExams () {
         Long startTime = System.currentTimeMillis();
         String status = "success";
-        List<FacAnalysis> top10Rates = null;
+        List<ExamAnalysis> top10Rates = null;
         try {
-            top10Rates = facAnalysisService.getTopRatesFacilities();
+            top10Rates = examAnalysisService.getTopFailRatesExams();
         } catch (Exception e) {
             status = "fail";
         } finally {
             logService.addLog(EventLog.builder()
-                    .serviceProvider("facilityServiceProvider")
-                    .serviceName("facAnalysisService")
-                    .serviceFunction("getTopRates")
+                    .serviceProvider("examServiceProvider")
+                    .serviceName("examAnalysisService")
+                    .serviceFunction("getTopFailRates")
                     .status(status)
                     .startTime(startTime)
                     .endTime(System.currentTimeMillis())

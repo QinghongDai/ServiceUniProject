@@ -30,7 +30,7 @@ public class FacilityDaoImpl implements FacilityDao {
     @Override
     public int save(Facility facility) {
         return jdbcTemplate.update("insert into csci927.facility (name, location, startDate, status) " +
-                "values (?, ?, ?, ?, ?, ?, ?)", facility.getName(), facility.getLocation(), facility.getStartDate(), facility.getStatus());
+                "values (?, ?, ?, ?)", facility.getName(), facility.getLocation(), facility.getStartDate(), facility.getStatus());
     }
 
     @Override

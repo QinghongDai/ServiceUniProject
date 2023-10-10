@@ -1,33 +1,32 @@
 package service.impl;
 
-import dao.FacAppointmentDao;
+import dao.ExamDao;
 import lombok.extern.log4j.Log4j;
 import model.common.MessageResponse;
-import model.facAppointment.FacAppointment;
+import model.exam.Exam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import service.FacAppointmentService;
+import service.ExamService;
 
 import java.util.List;
-
 @Service
 @Log4j
-public class FacAppointmentServiceImpl implements FacAppointmentService {
+public class ExamServiceImpl implements ExamService {
     @Autowired
-    private FacAppointmentDao facAppointmentDao;
-
+    private ExamDao examDao;
     @Override
-    public List<FacAppointment> getAllFacAppointment() {
-        return facAppointmentDao.findAll();
-    }
-    @Override
-    public FacAppointment getFacAppointmentById(Integer id) {
-        return facAppointmentDao.findById(id);
+    public List<Exam> getAllExams() {
+        return examDao.findAll();
     }
 
     @Override
-    public MessageResponse createFacAppointment(FacAppointment facAppointment) {
-        int result = facAppointmentDao.save(facAppointment);
+    public Exam getExamById(Integer id) {
+        return examDao.findById(id);
+    }
+
+    @Override
+    public MessageResponse createExam(Exam exam) {
+        int result = examDao.save(exam);
         if (0 == result){
             return MessageResponse.builder().message("Fail").build();
         }
@@ -35,12 +34,12 @@ public class FacAppointmentServiceImpl implements FacAppointmentService {
     }
 
     @Override
-    public MessageResponse updateFacAppointment(Integer id, FacAppointment facAppointmentParam){
-        FacAppointment facAppointment = facAppointmentDao.findById(id);
-        if (null== facAppointment){
+    public MessageResponse updateExam(Integer id, Exam exam) {
+        Exam examTemp = examDao.findById(id);
+        if (null== examTemp){
             return MessageResponse.builder().message("Fail").build();
         } else {
-            int result = facAppointmentDao.update(id, facAppointmentParam);
+            int result = examDao.update(id, exam);
             if (0 == result){
                 return MessageResponse.builder().message("Fail").build();
             }
@@ -49,8 +48,8 @@ public class FacAppointmentServiceImpl implements FacAppointmentService {
     }
 
     @Override
-    public MessageResponse deleteFacAppointment(Integer id) {
-        int result = facAppointmentDao.deleteById(id);
+    public MessageResponse deleteExam(Integer id) {
+        int result = examDao.deleteById(id);
         if (0 == result){
             return MessageResponse.builder().message("Fail").build();
         }
