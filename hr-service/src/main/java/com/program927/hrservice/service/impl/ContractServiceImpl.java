@@ -17,18 +17,17 @@ public class ContractServiceImpl implements ContractService {
     private ContractDao contractDao;
     @Override
     public List<Contract> getAllContract() {
-        return contractDao.getAllContract();
+        return contractDao.findAll();
     }
 
     @Override
     public Contract getContractById(Integer contractId) {
-        return contractDao.getContractById(contractId);
+        return contractDao.findById(contractId);
     }
 
     @Override
-    public MessageResponse createContract(ContractRequest contractRequest) {
-        Contract contract = new Contract();
-        int result = contractDao.createContract(contract);
+    public MessageResponse createContract(Contract contract) {
+        int result = contractDao.save(contract);
         if (0 == result){
             return MessageResponse.builder().message("Fail").build();
         }
@@ -37,11 +36,24 @@ public class ContractServiceImpl implements ContractService {
 
     @Override
     public MessageResponse updateContract(Integer contractId, ContractRequest contractRequest) {
-        return null;
+        Contract contract = contractDao.findById(contractId);
+        if (null== contract){
+            return MessageResponse.builder().message("Fail").build();
+        } else {
+            int result = contractDao.update(contractId, contractRequest);
+            if (0 == result){
+                return MessageResponse.builder().message("Fail").build();
+            }
+            return MessageResponse.builder().message("Success").build();
+        }
     }
 
     @Override
     public MessageResponse deleteContract(Integer contractId) {
-        return null;
+        int result = contractDao.deleteById(contractId);
+        if (0 == result){
+            return MessageResponse.builder().message("Fail").build();
+        }
+        return MessageResponse.builder().message("Success").build();
     }
 }

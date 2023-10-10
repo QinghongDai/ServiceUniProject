@@ -8,8 +8,8 @@ public class Contract {
     private String type;
     private String employeeId;
     private Integer status;
-    private Data signDate;
-    private Data expireDate;
+    private String signDate;
+    private String expireDate;
     private String contractName;
     private String fileUrl;
 }

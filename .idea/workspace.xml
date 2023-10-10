@@ -4,32 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbd4c2ce-c85d-4386-8d66-127fa28b7c65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/controller/ContractController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/ContractDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/ContractDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/contract/Contract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/contract/ContractRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/ContractService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/ContractServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="cbd4c2ce-c85d-4386-8d66-127fa28b7c65" name="Changes" comment="init contract">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/EmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/EventLogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/EventLogDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/EmployeeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/EmployeeDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/EventLogDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/EventLogDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/EmployeeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/employee/EmployeeRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/EventLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/eventLog/EventLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/common/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/provider/EmployeeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/provider/EmployeeProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/provider/impl/EmployeeProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/provider/impl/EmployeeProviderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/LogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/controller/ContractController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/ContractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/ContractDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/ContractDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/dao/impl/ContractDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/contract/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/model/contract/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/ContractServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/ContractServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hr-service/src/main/java/com/program927/hrservice/service/impl/LogServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/init_hr_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/init_hr_db.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,6 +84,19 @@
       <option name="presentableId" value="Default" />
       <updated>1696827662258</updated>
     </task>
+    <task id="LOCAL-00001" summary="init contract">
+      <option name="closed" value="true" />
+      <created>1696848688168</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696848688168</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init contract" />
+    <option name="LAST_COMMIT_MESSAGE" value="init contract" />
   </component>
 </project>

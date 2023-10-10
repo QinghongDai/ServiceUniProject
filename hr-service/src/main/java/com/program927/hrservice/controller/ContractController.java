@@ -64,7 +64,7 @@ public class ContractController {
         return new ResponseEntity<>(contract, HttpStatus.OK);
     }
     @PostMapping("/add")
-    public ResponseEntity<MessageResponse> addContract(@RequestBody ContractRequest contract) {
+    public ResponseEntity<MessageResponse> addContract(@RequestBody Contract contract) {
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;

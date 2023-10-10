@@ -2,17 +2,16 @@ package com.program927.hrservice.dao;
 
 import com.program927.hrservice.model.contract.Contract;
 import com.program927.hrservice.model.contract.ContractRequest;
-
 import java.util.List;
 
 public interface ContractDao {
-    List<Contract> getAllContract();
+    List<Contract> findAll();
 
-    Contract getContractById(Integer contractId);
+    Contract findById(Integer contractId);
 
-    int createContract(Contract contract);
+    int save(Contract contract);
 
-    int updateContract(Integer contractId, ContractRequest contractRequest);
+    int update(Integer contractId, ContractRequest contractRequest);
 
-    int deleteContract(Integer contractId);
+    int deleteById(Integer contractId);
 }

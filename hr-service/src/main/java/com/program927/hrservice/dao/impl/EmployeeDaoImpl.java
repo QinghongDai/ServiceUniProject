@@ -18,13 +18,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public List<Employee> findAll() {
         String sql = "select * from employee";
-        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Employee>(Employee.class));
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Employee.class));
     }
 
     @Override
     public Employee findById(Integer employeeId) {
         String sql = "select * from employee where id = ?";
-        return jdbcTemplate.queryForObject(sql, new Object[]{employeeId}, new BeanPropertyRowMapper<Employee>(Employee.class));
+        return jdbcTemplate.queryForObject(sql, new Object[]{employeeId}, new BeanPropertyRowMapper<>(Employee.class));
     }
 
     @Override

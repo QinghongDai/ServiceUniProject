@@ -14,7 +14,7 @@ public interface ContractService {
 
     Contract getContractById(Integer contractId);
 
-    MessageResponse createContract(ContractRequest contractRequest);
+    MessageResponse createContract(Contract contract);
 
     MessageResponse updateContract(Integer contractId, ContractRequest contractRequest);
 
