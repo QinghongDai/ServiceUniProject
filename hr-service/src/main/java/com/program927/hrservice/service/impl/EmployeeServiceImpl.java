@@ -5,13 +5,11 @@ import com.program927.hrservice.model.employee.Employee;
 import com.program927.hrservice.model.employee.EmployeeRequest;
 import com.program927.hrservice.model.common.MessageResponse;
 import com.program927.hrservice.service.EmployeeService;
-import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@Log4j
 public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeDao employeeDao;

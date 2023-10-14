@@ -3,7 +3,6 @@ package com.program927.facilityservice.service.impl;
 import com.program927.facilityservice.dao.FacAppointmentDao;
 import com.program927.facilityservice.model.common.MessageResponse;
 import com.program927.facilityservice.service.FacAppointmentService;
-import lombok.extern.log4j.Log4j;
 import com.program927.facilityservice.model.facAppointment.FacAppointment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@Log4j
 public class FacAppointmentServiceImpl implements FacAppointmentService {
     @Autowired
     private FacAppointmentDao facAppointmentDao;

@@ -2,7 +2,6 @@ package com.program927.facilityservice.service.impl;
 
 import com.program927.facilityservice.model.facility.Facility;
 import com.program927.facilityservice.dao.FacilityDao;
-import lombok.extern.log4j.Log4j;
 import com.program927.facilityservice.model.common.MessageResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +9,6 @@ import com.program927.facilityservice.service.FacilityService;
 
 import java.util.List;
 @Service
-@Log4j
 public class FacilityServiceImpl implements FacilityService {
     @Autowired
     private FacilityDao facilityDao;

@@ -1,7 +1,6 @@
 package com.program927.examservice.service.impl;
 
 import com.program927.examservice.dao.ExamParticipantsDao;
-import lombok.extern.log4j.Log4j;
 import com.program927.examservice.model.common.MessageResponse;
 import com.program927.examservice.model.examParticipants.ExamParticipants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import com.program927.examservice.service.ExamParticipantsService;
 import java.util.List;
 
 @Service
-@Log4j
 public class ExamParticipantsServiceImpl implements ExamParticipantsService {
     @Autowired
     private ExamParticipantsDao examParticipantsDao;

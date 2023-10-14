@@ -5,13 +5,11 @@ import com.program927.hrservice.model.common.MessageResponse;
 import com.program927.hrservice.model.contract.Contract;
 import com.program927.hrservice.model.contract.ContractRequest;
 import com.program927.hrservice.service.ContractService;
-import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-@Log4j
 public class ContractServiceImpl implements ContractService {
     @Autowired
     private ContractDao contractDao;
