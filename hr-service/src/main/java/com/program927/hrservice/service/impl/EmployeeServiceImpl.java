@@ -29,7 +29,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public MessageResponse createEmployee(EmployeeRequest employeeRequest) {
         Employee newEmployee = new Employee();
         newEmployee.setFirstName(employeeRequest.getFirstName());
-        newEmployee.setLastname(employeeRequest.getLastName());
+        newEmployee.setLastName(employeeRequest.getLastName());
         newEmployee.setPhoneNumber(employeeRequest.getPhoneNumber());
         newEmployee.setEmail(employeeRequest.getEmail());
         newEmployee.setSalary(employeeRequest.getSalary());

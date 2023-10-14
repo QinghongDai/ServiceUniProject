@@ -30,7 +30,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public int save(Employee newEmployee) {
         return jdbcTemplate.update("insert into csci927.employee (firstName, lastName, phoneNumber, email, salary, department) " +
-                "values (?, ?, ?, ?, ?, ?)", newEmployee.getFirstName(), newEmployee.getLastname(),
+                "values (?, ?, ?, ?, ?, ?)", newEmployee.getFirstName(), newEmployee.getLastName(),
                 newEmployee.getPhoneNumber(), newEmployee.getEmail(), newEmployee.getSalary(), newEmployee.getDepartment());
     }
 
