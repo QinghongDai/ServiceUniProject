@@ -26,7 +26,7 @@ public class ContractController {
 
     @GetMapping("/getAll")
     public ResponseEntity<List<Contract>> getAllContracts () {
-        log.error("start ContractController getAll");
+        log.info("start ContractController getAll");
         Long startTime = System.currentTimeMillis();
         String status = "success";
         List<Contract> contracts = null;
@@ -49,7 +49,7 @@ public class ContractController {
     }
     @GetMapping("/query/{id}")
     public ResponseEntity<Contract> getContractById (@PathVariable("id") Integer id) {
-        log.error("start ContractController query");
+        log.info("start ContractController query param: " + id);
         Long startTime = System.currentTimeMillis();
         String status = "success";
         Contract contract = null;
@@ -57,7 +57,7 @@ public class ContractController {
             contract = contractService.getContractById(id);
         } catch (Exception e) {
             status = "fail";
-            log.error("Error occurred in ContractController query");
+            log.error("Error occurred in ContractController query param: " + id);
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -72,7 +72,7 @@ public class ContractController {
     }
     @PostMapping("/add")
     public ResponseEntity<MessageResponse> addContract(@RequestBody Contract contract) {
-        log.error("start ContractController add");
+        log.info("start ContractController add param: " + contract.toString());
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -80,7 +80,7 @@ public class ContractController {
             response = contractService.createContract(contract);
         } catch (Exception e) {
             status = "fail";
-            log.error("Error occurred in ContractController add");
+            log.error("Error occurred in ContractController add param: " + contract.toString());
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -95,7 +95,7 @@ public class ContractController {
     }
     @PutMapping("/update/{id}")
     public ResponseEntity<MessageResponse> updateContract( @PathVariable Integer id, @RequestBody ContractRequest contract) {
-        log.info("start ContractController update");
+        log.info("start ContractController update param: id: " + id + ", contract:: " + contract.toString());
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -118,7 +118,7 @@ public class ContractController {
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<MessageResponse> deleteContract(@PathVariable("id") Integer id) {
-        log.info("start ContractController delete");
+        log.info("start ContractController delete param: id:" + id);
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;

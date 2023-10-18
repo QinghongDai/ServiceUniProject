@@ -48,7 +48,7 @@ public class EmployeeController {
     }
     @GetMapping("/query/{id}")
     public ResponseEntity<Employee> getEmployeeById (@PathVariable("id") Integer id) {
-        log.info("start EmployeeController query");
+        log.info("start EmployeeController query param: id: " + id);
         Long startTime = System.currentTimeMillis();
         String status = "success";
         Employee employee = null;
@@ -56,7 +56,7 @@ public class EmployeeController {
             employee = employeeService.getEmployeeById(id);
         } catch (Exception e) {
             status = "fail";
-            log.error("Error occurred in EmployeeController query");
+            log.error("Error occurred in EmployeeController query param: id: " + id);
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -71,7 +71,7 @@ public class EmployeeController {
     }
     @PostMapping("/add")
     public ResponseEntity<MessageResponse> addEmployee(@RequestBody EmployeeRequest employee) {
-        log.info("start EmployeeController add");
+        log.info("start EmployeeController add param employee: " + employee.toString());
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -79,7 +79,7 @@ public class EmployeeController {
             response = employeeService.createEmployee(employee);
         } catch (Exception e) {
             status = "fail";
-            log.error("Error occurred in EmployeeController add");
+            log.error("Error occurred in EmployeeController add param employee: " + employee.toString());
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -94,7 +94,7 @@ public class EmployeeController {
     }
     @PutMapping("/update/{id}")
     public ResponseEntity<MessageResponse> updateEmployee( @PathVariable Integer id, @RequestBody EmployeeRequest employee) {
-        log.info("start EmployeeController update");
+        log.info("start EmployeeController update param employee: " + employee.toString());
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -102,7 +102,7 @@ public class EmployeeController {
             response = employeeService.updateEmployee(id, employee);
         } catch (Exception e) {
             status = "fail";
-            log.error("Error occurred in EmployeeController update");
+            log.error("Error occurred in EmployeeController update param employee: " + employee.toString());
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
@@ -117,7 +117,7 @@ public class EmployeeController {
     }
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<MessageResponse> deleteEmployee(@PathVariable("id") Integer id) {
-        log.info("start EmployeeController delete");
+        log.info("start EmployeeController delete param id: " + id);
         Long startTime = System.currentTimeMillis();
         String status = "success";
         MessageResponse response = null;
@@ -125,7 +125,7 @@ public class EmployeeController {
             response = employeeService.deleteEmployee(id);
         } catch (Exception e) {
             status = "fail";
-            log.error("Error occurred in EmployeeController delete");
+            log.error("Error occurred in EmployeeController delete param id: " + id);
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
