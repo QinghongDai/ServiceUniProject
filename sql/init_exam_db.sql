@@ -1,53 +1,25 @@
 CREATE DATABASE csci927;
 
-CREATE TABLE csci927.EMPLOYEE (
+CREATE TABLE csci927.EXAM (
   id int AUTO_INCREMENT,
-  firstName varchar(64),
-  lastName varchar(64),
-  phoneNumber varchar(16),
-  email varchar(64),
-  salary DECIMAL(7,2) default 0,
-  department varchar(64),
+  type varchar(1),
+  subjectCode varchar(12),
+  subjectName varchar(255),
+  location varchar(255),
+  startTime varchar(32),
+  takeMins int(3),
   created DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated DATETIME DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id)
 );
 
-CREATE TABLE csci927.EVENTLOG (
+CREATE TABLE csci927.EXAMPARTICIPANTS (
   id int AUTO_INCREMENT,
-  serviceProvider varchar(32),
-  serviceName varchar(32),
-  serviceFunction varchar(32),
-  status varchar(16),
-  startTime bigint,
-  endTime bigint,
-  created DATETIME DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (id)
-);
-
-CREATE TABLE csci927.CONTRACT (
-  id int AUTO_INCREMENT,
-  status char(1),
-  type varchar(16),
-  employeeId int,
-  signDate varchar(10),
-  expireDate varchar(10),
+  examId int(12),
+  userId int(12),
+  score DECIMAL(5,2) default 0,
+  status varchar(1),
   created DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated DATETIME DEFAULT CURRENT_TIMESTAMP,
-  fileUrl varchar(255),
-  PRIMARY KEY (id)
-);
-
-CREATE TABLE csci927.PAYROLL (
-  id int AUTO_INCREMENT,
-  employeeId int,
-  contractId int,
-  period varchar(32),
-  wages DECIMAL(7,2) default 0,
-  tax DECIMAL(7,2) default 0,
-  superPay DECIMAL(7,2) default 0,
-  otherPay DECIMAL(7,2) default 0,
-  realPay DECIMAL(7,2) default 0,
-  created DATETIME DEFAULT CURRENT_TIMESTAMP
   PRIMARY KEY (id)
 );
