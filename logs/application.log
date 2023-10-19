@@ -111,3 +111,17 @@
 15-10-2023 14:23:45.195 [http-nio-8081-exec-2] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
 15-10-2023 14:23:46.095 [http-nio-8081-exec-3] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
 15-10-2023 14:23:46.857 [http-nio-8081-exec-4] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+18-10-2023 20:34:44.341 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 21492 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+18-10-2023 20:34:44.377 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+18-10-2023 20:34:48.420 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 5.86 seconds (process running for 8.304)
+19-10-2023 19:35:43.465 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 9784 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+19-10-2023 19:35:43.494 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+19-10-2023 19:35:47.753 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 6.346 seconds (process running for 9.291)
+19-10-2023 19:36:20.298 [http-nio-8081-exec-1] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+19-10-2023 19:36:47.839 [http-nio-8081-exec-3] INFO  c.p.h.controller.EmployeeController.getEmployeeById - start EmployeeController query param: id: 4
+19-10-2023 19:37:19.907 [http-nio-8081-exec-4] INFO  c.p.h.controller.EmployeeController.addEmployee - start EmployeeController add param employee: EmployeeRequest(firstName=test5, lastName=Daihfd, phoneNumber=41344976867, email=qd311@uowmail.edu.au, salary=200.0, department=EIS)
+19-10-2023 19:37:25.609 [http-nio-8081-exec-5] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+19-10-2023 19:38:05.259 [http-nio-8081-exec-6] INFO  c.p.h.controller.EmployeeController.updateEmployee - start EmployeeController update param employee: EmployeeRequest(firstName=testSvcxvd, lastName=null, phoneNumber=413112112, email=js112@uowmail.edu.au, salary=44.0, department=EIS)
+19-10-2023 19:38:14.779 [http-nio-8081-exec-8] INFO  c.p.h.controller.EmployeeController.getEmployeeById - start EmployeeController query param: id: 6
+19-10-2023 19:38:40.509 [http-nio-8081-exec-7] INFO  c.p.h.controller.EmployeeController.deleteEmployee - start EmployeeController delete param id: 6
+19-10-2023 19:38:44.492 [http-nio-8081-exec-9] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll

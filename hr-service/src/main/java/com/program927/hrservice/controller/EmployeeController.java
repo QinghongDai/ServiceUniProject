@@ -102,7 +102,7 @@ public class EmployeeController {
             response = employeeService.updateEmployee(id, employee);
         } catch (Exception e) {
             status = "fail";
-            log.error("Error occurred in EmployeeController update param employee: " + employee.toString());
+            log.error("Error occurred in EmployeeController update param employee: " + employee.toString() );
         } finally {
             logService.addLog(EventLog.builder()
                     .serviceProvider("hrServiceProvider")
