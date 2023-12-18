@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServiceUni Human Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button,
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover,
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .notification {
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ServiceUni Human Resources</h1>
+
+        <section>
+            <h2>Add New Employee</h2>
+            <form id="addEmployeeForm">
+                <input type="text" id="employeeName" placeholder="Employee Name" required>
+                <input type="submit" value="Add Employee">
+            </form>
+        </section>
+
+        <section>
+            <h2>Available Employees</h2>
+            <button id="fetchEmployees">Refresh Employees</button>
+            <ul id="employeeList"></ul>
+        </section>
+
+        <section id="notifications">
+            <!-- Notifications will appear here -->
+        </section>
+    </div>
+
+    <script>
+        document.getElementById("fetchEmployees").addEventListener("click", fetchEmployees);
+        document.getElementById("addEmployeeForm").addEventListener("submit", addEmployee);
+
+        function fetchEmployees() {
+            fetch('http://localhost:8081/api/employees')
+                .then(response => response.json())
+                .then(data => {
+                    const employeeList = document.getElementById("employeeList");
+                    employeeList.innerHTML = '';
+                    data.forEach(employee => {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = employee.name; // Assumes the employee has a 'name' property
+                        employeeList.appendChild(listItem);
+                    });
+                })
+                .catch(error => {
+                    displayNotification("Error fetching employees.", "error");
+                });
+        }
+
+        function addEmployee(event) {
+            event.preventDefault();
+            const employeeName = document.getElementById("employeeName").value;
+            fetch('http://localhost:8081/api/employees', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: employeeName
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    displayNotification(`Added employee: ${data.name}`, "success");
+                    fetchEmployees();
+                })
+                .catch(error => {
+                    displayNotification("Error adding employee.", "error");
+                });
+        }
+
+        function displayNotification(message, type) {
+            const notificationSection = document.getElementById("notifications");
+            const notification = document.createElement("div");
+            notification.textContent = message;
+            notification.classList.add(type, "notification");
+            notificationSection.appendChild(notification);
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

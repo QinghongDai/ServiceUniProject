@@ -125,3 +125,63 @@
 19-10-2023 19:38:14.779 [http-nio-8081-exec-8] INFO  c.p.h.controller.EmployeeController.getEmployeeById - start EmployeeController query param: id: 6
 19-10-2023 19:38:40.509 [http-nio-8081-exec-7] INFO  c.p.h.controller.EmployeeController.deleteEmployee - start EmployeeController delete param id: 6
 19-10-2023 19:38:44.492 [http-nio-8081-exec-9] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 10:21:48.175 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 4144 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 10:21:48.187 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 10:21:52.889 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 6.828 seconds (process running for 9.985)
+20-10-2023 10:22:51.066 [http-nio-8081-exec-2] INFO  c.p.h.controller.EmployeeController.addEmployee - start EmployeeController add param employee: EmployeeRequest(firstName=test5, lastName=Daihfd, phoneNumber=41344976867, email=qd311@uowmail.edu.au, salary=200.0, department=EIS)
+20-10-2023 10:23:09.723 [http-nio-8081-exec-3] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 11:42:08.071 [http-nio-8081-exec-7] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 11:42:09.233 [http-nio-8081-exec-4] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 11:42:10.076 [http-nio-8081-exec-8] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 11:42:11.002 [http-nio-8081-exec-9] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 12:07:41.404 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 18548 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:07:41.409 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:07:45.651 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 5.265 seconds (process running for 6.167)
+20-10-2023 12:08:50.423 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 21484 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:08:50.428 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:08:54.424 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.903 seconds (process running for 5.735)
+20-10-2023 12:18:54.047 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 3520 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:18:54.052 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:18:57.375 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.26 seconds (process running for 5.086)
+20-10-2023 12:20:17.592 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 11584 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:20:17.597 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:20:20.771 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.058 seconds (process running for 4.864)
+20-10-2023 12:21:13.605 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 17772 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:21:13.610 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:21:16.790 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.137 seconds (process running for 4.933)
+20-10-2023 12:21:55.044 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 2712 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:21:55.049 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:21:58.424 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.267 seconds (process running for 5.141)
+20-10-2023 12:22:37.044 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 8728 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:22:37.048 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:22:40.175 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.089 seconds (process running for 4.916)
+20-10-2023 12:22:52.637 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 3272 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:22:52.642 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:22:55.786 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 3.987 seconds (process running for 4.813)
+20-10-2023 12:26:54.232 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 14680 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:26:54.236 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:26:57.612 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.283 seconds (process running for 5.109)
+20-10-2023 12:28:18.624 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 18276 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:28:18.628 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:28:21.779 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.108 seconds (process running for 4.871)
+20-10-2023 12:30:09.256 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 1984 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:30:09.261 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:30:13.328 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 4.986 seconds (process running for 5.833)
+20-10-2023 12:31:11.482 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarting - Starting HrServiceApplication using Java 18.0.1.1 with PID 18460 (D:\workspace\MicroService_927GroupProject\hr-service\target\classes started by momo in D:\workspace\MicroService_927GroupProject)
+20-10-2023 12:31:11.487 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+20-10-2023 12:31:15.571 [restartedMain] INFO  c.p.hrservice.HrServiceApplication.logStarted - Started HrServiceApplication in 5.129 seconds (process running for 5.903)
+20-10-2023 12:33:36.232 [http-nio-8081-exec-5] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 12:39:42.570 [http-nio-8081-exec-10] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 12:39:48.948 [http-nio-8081-exec-9] INFO  c.p.h.controller.EmployeeController.getEmployeeById - start EmployeeController query param: id: 6
+20-10-2023 12:39:48.960 [http-nio-8081-exec-9] ERROR c.p.h.controller.EmployeeController.getEmployeeById - Error occurred in EmployeeController query param: id: 6
+20-10-2023 12:40:00.059 [http-nio-8081-exec-1] INFO  c.p.h.controller.EmployeeController.getEmployeeById - start EmployeeController query param: id: 7
+20-10-2023 12:40:11.963 [http-nio-8081-exec-2] INFO  c.p.h.controller.EmployeeController.addEmployee - start EmployeeController add param employee: EmployeeRequest(firstName=test8, lastName=Daihfd, phoneNumber=41344976867, email=qd311@uowmail.edu.au, salary=200.0, department=EIS)
+20-10-2023 12:40:16.374 [http-nio-8081-exec-4] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 12:57:30.291 [http-nio-8081-exec-6] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 12:57:46.001 [http-nio-8081-exec-7] INFO  c.p.h.controller.EmployeeController.getEmployeeById - start EmployeeController query param: id: 8
+20-10-2023 12:58:02.664 [http-nio-8081-exec-8] INFO  c.p.h.controller.EmployeeController.addEmployee - start EmployeeController add param employee: EmployeeRequest(firstName=jtest9, lastName=Wang, phoneNumber=415110110, email=ww314@uowmail.edu.au, salary=2.0, department=BUS)
+20-10-2023 12:58:07.304 [http-nio-8081-exec-10] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 12:58:23.683 [http-nio-8081-exec-9] INFO  c.p.h.controller.EmployeeController.updateEmployee - start EmployeeController update param employee: EmployeeRequest(firstName=testSvcxvd, lastName=null, phoneNumber=413112112, email=js112@uowmail.edu.au, salary=44.0, department=EIS)
+20-10-2023 12:58:27.919 [http-nio-8081-exec-1] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll
+20-10-2023 12:58:48.561 [http-nio-8081-exec-2] INFO  c.p.h.controller.EmployeeController.deleteEmployee - start EmployeeController delete param id: 9
+20-10-2023 12:58:53.488 [http-nio-8081-exec-4] INFO  c.p.h.controller.EmployeeController.getAllEmployees - start EmployeeController getAll

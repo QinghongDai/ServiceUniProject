@@ -21,6 +21,30 @@
         <module>facility-service</module>
     </modules>
 
+    <dependencies>
+        <!-- Hadoop MapReduce dependencies -->
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>3.3.0</version>
+            <!-- Choose the version that matches your Hadoop installation -->
+        </dependency>
+
+        <!-- Apache Commons CSV -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.8</version> <!-- Choose the version you need -->
+        </dependency>
+
+        <!-- JSON library -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20210307</version> <!-- Choose the version you need -->
+        </dependency>
+    </dependencies>
+
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
